@@ -1,0 +1,81 @@
+<ion-view view-title="Location view">
+  <ion-content>
+
+    <div id="locationViewImageContainer">
+
+      <img id="locationViewImage" src="{{location.imageUrl}}" />
+
+    </div>
+
+    <button ng-if="loggedIn" class="button button-block button-stable">
+      Edit location
+    </button>
+
+
+    <div class="list">
+
+      <div class="item item-divider">
+        Photo taken by {{location.username}}
+      </div>
+
+      <span class="item">
+
+        <h5 class="text-right">{{location.datum}}, {{location.uhrzeit}}</h5>
+        <h5 class="text-right">Lat:{{location.coord.lat}}  Lang:{{location.coord.lng}}</h5>
+
+
+        <h1>{{location.title}}</h1>
+
+        <h2>{{location.summary}}</h2>
+
+      </span>
+
+      <span class="item item-text-wrap">
+
+        <p class="item-text-wrap">{{location.description}}</p>
+
+      </span>
+
+      <div class="item item-divider">
+        Technical Sheet
+      </div>
+
+      <span class="item">
+
+        <p>Camera: {{location.camera}}</p>
+        <p>Lens: {{location.lens}}</p>
+        <p>Apperture: {{location.apperture}}</p>
+        <p>Focal length: {{location.focalLength}}</p>
+        <p>Iso: {{location.iso}}</p>
+        <p>Shutterspeed: {{location.shutterSpeed}}</p>
+
+      </span>
+
+      <div class="item item-divider">
+        Pro tip
+      </div>
+
+      <span class="item item-text-wrap">
+
+        <p>{{location.proTip}}</p>
+
+      </span>
+
+      <div class="item item-divider">
+        Tags
+      </div>
+
+      <span class="item item-text-wrap">
+
+        <p ng-repeat="tag in location.tags">
+          {{tag}}
+        </p>
+
+      </span>
+
+
+    </div>
+
+
+  </ion-content>
+</ion-view>

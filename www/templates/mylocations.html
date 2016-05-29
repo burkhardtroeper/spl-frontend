@@ -1,0 +1,16 @@
+<ion-view view-title="My locations">
+  <ion-content>
+
+    <div class="list">
+
+      <div class="item item-thumbnail-left" ng-repeat="location in locations track by $index" ng-click="">
+        <img src="{{location.imageUrl}}">
+        <h2>{{location.shortTitle}}</h2>
+        <p>{{location.summary}}</p>
+        <i class="icon right ion-ios-arrow-right" ng-click="selectLocation($index)"></i>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

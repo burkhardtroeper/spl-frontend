@@ -1,0 +1,26 @@
+<ion-view view-title="Locations">
+  <ion-content scroll="false">
+
+    <ng-map zoom="2" disable-default-u-i="true" keyboard-shortcuts="true" on-click="placeMarker()">
+
+      <marker ng-repeat="location in locations track by $index"
+
+              position="{{location.coord.lat}}, {{location.coord.lng}}"
+
+              title="{{location.title}}"
+
+              data="{{$index}}"
+
+              on-click="markerClicked(this)">
+
+      </marker>
+
+    </ng-map>
+
+  </ion-content>
+
+  <div class="bar bar-footer button-stable" ng-click="showSearchPopup()">
+    <div class="title">Search</div>
+  </div>
+
+</ion-view>

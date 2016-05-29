@@ -1,0 +1,36 @@
+/* Empty. Add your own CSS if you like */
+
+
+/* Main */
+
+#mainMapContainer {
+
+  height: 100vh !important;
+  width: 100%;
+
+}
+
+ng-map {
+  position:absolute;
+  height:100%;
+  width:100%;
+}
+
+
+
+/* Location view */
+
+#locationViewImageContainer {
+
+  height: 40vh !important;
+  width: 100%;
+
+}
+
+#locationViewImage {
+
+  height: 100%;
+  width: 100%;
+
+}
+
